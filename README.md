@@ -5,7 +5,9 @@ Demonstration application for Flow which provides IP inferred location informati
 
 ## Instructions
 - run `npm install`
-- create `.env` file and punch in your environment variables following `.env.example` file.
+- make sure to be running Node v10.15.13
+- to run tests `cp .env.example .env` is enough
+- to try out the API create `.env` file and punch in your environment variables following `.env.example` file.
 - start the server and browse `http://localhost:PORT/v1/documentation` for the swagger docs!
 
 ## Commands
