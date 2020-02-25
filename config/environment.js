@@ -1,0 +1,13 @@
+const {
+  IP_API_JSON_BASE_URL,
+  PORT,
+  OPEN_WEATHER_API_BASE_URL,
+  OPEN_WEATHER_API_KEY,
+} = process.env;
+
+module.exports = {
+  IP_API_JSON_BASE_URL,
+  PORT,
+  OPEN_WEATHER_API_BASE_URL,
+  OPEN_WEATHER_API_KEY,
+};

@@ -1,0 +1,27 @@
+{
+  "name": "flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "pretest": "eslint .",
+    "test": "tap --100"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^2.12.0",
+    "fastify-status": "^1.1.2",
+    "fastify-swagger": "^2.5.0",
+    "got": "^10.6.0",
+    "lodash": "^4.17.15",
+    "nock": "^12.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "tap": "^14.10.6"
+  }
+}
