@@ -32,7 +32,7 @@ const errorHandler = (error, _request, reply) =>
       .send({message: error.message});
 
 const buildFastify = () => {
-  const fastify = createFastify({logger: true, trustProxy: true}});
+  const fastify = createFastify({logger: true, trustProxy: true});
   fastify.register(swagger, swaggerOptions);
   fastify.register(routes, {prefix: '/v1'});
   fastify.register(statusPlugin, {endpoint: '/v1', hide: false});
