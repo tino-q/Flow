@@ -1,6 +1,8 @@
 # Location & Weather API
 Demonstration application for Flow which provides IP inferred location information and current weather or forecast (location based or queried by city name)
 
+## Application is running @ https://sheltered-earth-53915.herokuapp.com/v1
+
 ## Node version used:  v10.15.3 (npm v6.11.2)
 
 ## Instructions
