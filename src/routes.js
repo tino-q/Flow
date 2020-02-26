@@ -7,7 +7,7 @@ const {
 const {
   location: locationSchema,
   currentWeather: currentWeatherSchema,
-//  weatherForecast: weatherForecastSchema,
+  weatherForecast: weatherForecastSchema,
 } = require('./routeSchemas');
 
 module.exports = function(fastify, opts, done) {
@@ -30,14 +30,14 @@ module.exports = function(fastify, opts, done) {
     url: '/current',
     preHandler: getCurrentCity,
     handler: currentWeather,
-    // schema: currentWeatherSchema,
+    schema: currentWeatherSchema,
   });
 
   fastify.route({
     method: 'GET',
     url: '/forecast/:city',
     handler: weatherForecast,
-    // schema: weatherForecastSchema,
+    schema: weatherForecastSchema,
   });
 
   fastify.route({
@@ -45,7 +45,7 @@ module.exports = function(fastify, opts, done) {
     url: '/forecast',
     preHandler: getCurrentCity,
     handler: weatherForecast,
-    // schema: weatherForecastSchema,
+    schema: weatherForecastSchema,
   });
 
   done();
