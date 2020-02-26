@@ -131,8 +131,8 @@ module.exports = {
                     properties: {
                       'id': {type: 'number'},
                       'main': {type: 'string'},
-                      'description': {type: 'number'},
-                      'icon': {type: 'number'},
+                      'description': {type: 'string'},
+                      'icon': {type: 'string'},
                     },
                   },
                 },
@@ -149,6 +149,12 @@ module.exports = {
                     'deg': {type: 'number'},
                   },
                 },
+                'rain': {
+                  type: 'object',
+                  properties: {
+                    '3h': {type: 'number'},
+                  },
+                },
                 'sys': {
                   type: 'object',
                   properties: {
@@ -163,7 +169,7 @@ module.exports = {
             type: 'object',
             properties: {
               'id': {type: 'number'},
-              'name': {type: 'city'},
+              'name': {type: 'string'},
               'coord': {
                 type: 'object',
                 properties: {
