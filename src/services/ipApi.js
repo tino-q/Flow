@@ -4,8 +4,8 @@ const {
   IP_API_JSON_BASE_URL,
 } = require('../../config/environment');
 
-const getCurrentLocationInfo = () =>
-  got(`${IP_API_JSON_BASE_URL}/`).json().then((response) => {
+const getCurrentLocationInfo = (ip) =>
+  got(`${IP_API_JSON_BASE_URL}/${ip}`).json().then((response) => {
     if (get(response, 'status') == 'success') {
       return response;
     }

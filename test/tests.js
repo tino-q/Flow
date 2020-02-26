@@ -38,7 +38,7 @@ tap.test(`GET \`/location\` a bad request to service
   should be returned as an internal server error`, (t) => {
   const fastify = buildFastify();
   nock(IP_API_JSON_BASE_URL)
-      .get('/')
+      .get('/127.0.0.1')
       .reply(400);
 
   t.tearDown(() => fastify.close());
@@ -54,7 +54,7 @@ tap.test(`GET \`/location\` a bad request to service
 tap.test(`GET \`/location\` ip api fail response`, (t) => {
   const fastify = buildFastify();
   nock(IP_API_JSON_BASE_URL)
-      .get('/')
+      .get('/127.0.0.1')
       .reply(200, ipApiErrorResponse);
 
   t.tearDown(() => fastify.close());
@@ -73,7 +73,7 @@ tap.test(`GET \`/location\` ip api fail response`, (t) => {
 tap.test('GET `/location` route', (t) => {
   const fastify = buildFastify();
   nock(IP_API_JSON_BASE_URL)
-      .get('/')
+      .get('/127.0.0.1')
       .reply(200, buenosAiresLocationResponse);
 
   t.tearDown(() => fastify.close());
@@ -95,7 +95,7 @@ tap.test('GET `/current` route', (t) => {
   });
 
   nock(IP_API_JSON_BASE_URL)
-      .get('/')
+      .get('/127.0.0.1')
       .reply(200, buenosAiresLocationResponse);
 
   nock(OPEN_WEATHER_API_BASE_URL)
@@ -168,7 +168,7 @@ tap.test('GET `/forecast` route', (t) => {
   });
 
   nock(IP_API_JSON_BASE_URL)
-      .get('/')
+      .get('/127.0.0.1')
       .reply(200, buenosAiresLocationResponse);
 
   nock(OPEN_WEATHER_API_BASE_URL)
