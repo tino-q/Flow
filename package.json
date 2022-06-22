@@ -15,7 +15,7 @@
     "fastify": "^2.12.0",
     "fastify-status": "^1.1.2",
     "fastify-swagger": "^2.5.0",
-    "got": "^10.6.0",
+    "got": "^11.8.5",
     "lodash": "^4.17.15",
     "nock": "^12.0.1"
   },
